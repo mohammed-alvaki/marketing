@@ -1,0 +1,323 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --pri-color: #003366;
+    --sec-color: #407bff;
+    --p-color: rgba(0, 0, 0, 0.9);
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.hero-section {
+    background-color: url('wallpaper.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #e0e5ea;
+}
+
+.top-bar {
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.btn-contactus a,
+.learn-more a {
+    color: white;
+    border: none;
+    background-color: var(--pri-color);
+}
+
+.btn-contactus a:hover,
+.learn-more a:hover {
+    color: white;
+    background-color: var(--sec-color) !important;
+}
+
+.hero-section .logo img {
+    width: 70px;
+}
+
+
+.main-part {
+    padding: 100px 0;
+}
+
+.main-part h1 {
+    font-size: 1.6rem;
+}
+
+.main-part p {
+    opacity: 0.9;
+    line-height: 30px;
+    font-size: 1rem;
+}
+
+.hero-section .main-part.img-container {
+    width: 300px;
+    margin: auto;
+    margin-top: 70px;
+}
+
+.background-container {
+    width: 100%;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="%23002147"><path d="M0 1v98c134.3 0 153.7-98 296-98H0Z" opacity=".5"></path><path d="M1000 4v86C833.3 90 833.3 4 666.7 4S500 90 333.3 90 166.7 4 0 4h1000Z" opacity=".5"></path><path d="M617 1v86C372 119 384 1 196 1h421Z" opacity=".5"></path><path d="M1000 0H0v52C62.5 28 125 4 250 4c250 0 250 96 500 96 125 0 187.5-24 250-48V0Z"></path></svg>');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.img-container img {
+    width: 100%;
+}
+
+#btn-back{
+    background-color: #EEE;
+    position: fixed;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.9;
+    color: var(--pri-color);
+    z-index: 10;
+    transition: transform 0.3s ease-in-out;
+}
+
+#btn-back:hover {
+    transform: translateX(-50%) translateY(-5px);
+}
+@media (min-width:768px) {
+
+    .img-container {
+        margin-top: 0;
+    }
+
+    .main-part h1 {
+        font-size: 2rem;
+    }
+
+}
+
+@media(min-width:992px) {
+    .main-part p {
+        font-size: 1.2rem;
+    }
+}
+
+/* ******************************** */
+.cards-section {
+    padding: 100px 0;
+}
+
+.cards-section h3 {
+    color: var(--pri-color);
+    position: relative;
+}
+
+.cards-section h3::after {
+    content: "";
+    width: 50px;
+    height: 3px;
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--pri-color);
+}
+
+.card img {
+    height: 200px;
+}
+
+.card-title {
+    color: var(--pri-color) !important;
+    overflow: hidden;
+    height: 60px;
+    line-height: 30px;
+}
+
+.card-text {
+    color: var(--p-color);
+    overflow: hidden;
+    height: 150px;
+    line-height: 30px;
+}
+
+@media (min-width:768px) {
+    .card-text {
+        height: 120px;
+        line-height: 30px;
+    }
+}
+
+@media (min-width:1200px) {
+    .card-title {
+        height: 30px;
+        line-height: 30px;
+    }
+
+    .card-text {
+        height: 100px;
+        line-height: 30px;
+    }
+}
+
+/* ****************************** */
+section.digital-marketing {
+    background-color: var(--pri-color);
+    padding: 50px 10px;
+    clip-path: polygon(0 5%, 50% 0, 100% 5%, 100% 95%, 50% 100%, 0 95%);
+}
+
+.digital-marketing p {
+    color: white;
+    opacity: 0.9;
+}
+
+.digital-marketing .marketing-img img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.digital-marketing p {
+    line-height: 30px;
+    font-size: 1.2rem;
+}
+
+@media (min-width:768px) and (max-width:991px) {
+
+    section.digital-marketing {
+        padding: 70px 10px;
+    }
+
+    .digital-marketing .marketing-img img {
+        aspect-ratio: 5/6;
+    }
+
+    .digital-marketing .text-content {
+        padding-left: 10px;
+    }
+
+}
+
+@media (min-width:992px) {
+    section.digital-marketing {
+        padding: 100px 10px;
+    }
+
+    .digital-marketing p {
+        font-size: 1.2rem;
+        line-height: 40px;
+    }
+
+    .digital-marketing .text-content {
+        padding-left: 20px;
+    }
+
+    .digital-marketing .marketing-img img {
+        width: 400px;
+    }
+
+}
+
+@media(min-width:1200px) {
+    .digital-marketing .text-content {
+        margin-left: -50px !important;
+    }
+}
+
+/* ************************ */
+.contact-section {
+    padding: 100px 0;
+}
+
+.contact-img {
+    width: 100%;
+}
+
+.contact-section :where(h3, b) {
+    color: var(--pri-color);
+}
+
+form {
+    background: linear-gradient(to top, var(--pri-color), var(--sec-color));
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8);
+}
+
+form input {
+    width: 100%;
+}
+
+form input {
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: 2px solid var(--sec-color);
+}
+
+form button {
+    width: 50%;
+    background-color: var(--pri-color);
+    color: white;
+    border: 1px solid white;
+    transition: background-color 0.3s linear;
+}
+
+form textarea {
+    width: 100%;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    resize: none;
+}
+
+form button:hover {
+    background-color: var(--sec-color);
+}
+
+@media(min-width:768px) {
+    .contact-section p {
+        font-size: 1.3rem;
+        line-height: 40px;
+    }
+}
+
+
+/* ******************* */
+.footer-section {
+    padding: 70px 0;
+    background-color: var(--pri-color);
+}
+
+hr {
+    margin-top: 2.5rem !important;
+    background-image: linear-gradient(to right, transparent, white, transparent);
+    border-radius: 50%;
+    height: 1px !important;
+}
+
+
+.footer-section .row {
+    opacity: 0.8;
+}
